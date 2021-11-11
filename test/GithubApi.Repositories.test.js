@@ -1,10 +1,10 @@
 const agent = require('superagent');
 const statusCode = require('http-status-codes');
-const { expect } = require('chai');
+const chai = require('chai');
 const md5 = require('md5');
 const chaiSubset = require('chai-subset');
-const chai = require('chai');
 
+const { expect } = chai;
 chai.use(chaiSubset);
 
 const urlBase = 'https://api.github.com';
