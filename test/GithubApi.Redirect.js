@@ -22,8 +22,7 @@ describe('GitHub Api HEAD method', () => {
 
   it('Redirecting requests', async () => {
     const response = await agent.get(`${urlBase}/${githubUserName}/redirect-test`)
-      .set('User-Agent', 'agent')
-      .auth('token', process.env.ACCESS_TOKEN);
+      .set('User-Agent', 'agent');
 
     expect(response.status).to.equal(statusCode.StatusCodes.OK);
   });
