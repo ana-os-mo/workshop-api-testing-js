@@ -25,7 +25,7 @@ describe('First Api Tests', () => {
         // const url = "https://httpbin.org/get?name=John&age=31&city=Medellin";
       
         const response = await agent.get('https://httpbin.org/get').query(query);
-        //console.log(response.body);
+        // console.log(response.body);
         // to.equal(respuesta esperada)
         expect(response.status).to.equal(statusCode.StatusCodes.OK);
         expect(response.body.args).to.eql(query);
@@ -53,7 +53,6 @@ describe('First Api Tests', () => {
         };
   
         const response = await agent.patch('https://httpbin.org/patch').send(query);
-
         expect(response.status).to.equal(statusCode.StatusCodes.OK);
         expect(response.body).to.have.property('json');
         expect(response.body.json).to.eql(query);
